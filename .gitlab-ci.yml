@@ -15,7 +15,6 @@ build:
    artifacts:
       paths:
          - build/
-      expire_in: 30 days
 
 deploy:
    stage: deploy
