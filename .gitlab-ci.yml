@@ -1,8 +1,27 @@
 stages:
    - build
+   - deploy
 
 build:
    stage: build
+   image: node:16.13.0-stretch
+   only:
+      - tags
    script: 
+      - echo 'install dependencies'
+      - npm install
       - echo 'build project'
       - npm run build
+   artifacts:
+      paths:
+         - build/
+      expire_in: 30 days
+
+deploy:
+   stage: deploy
+   image: python:latest
+   only:
+      - tags
+   script:
+      - pip install awscli
+      - aws s3 sync ./build s3://staging-cicd-ecocrew
