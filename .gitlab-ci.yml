@@ -1,6 +1,5 @@
 stages:
    - build
-   - deploy
 
 build:
    stage: build
@@ -15,12 +14,3 @@ build:
    artifacts:
       paths:
          - build/
-
-deploy:
-   stage: deploy
-   image: python:latest
-   only:
-      - tags
-   script:
-      - pip install awscli
-      - aws s3 sync ./build s3://staging-cicd-ecocrew
