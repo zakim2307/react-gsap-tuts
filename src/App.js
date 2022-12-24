@@ -16,16 +16,14 @@ function App() {
 
   useEffect(() => {
     if (expand) {
-      gsap.to(circleRed, {
-        width: 200,
-        height: 200,
+      gsap.to([circleRed, circleBlue, circleGreen], {
+        x: 200,
         ease: Power3.easeOut,
         duration: 0.8,
       });
     } else if (!expand) {
-      gsap.to(circleRed, {
-        width: 75,
-        height: 75,
+      gsap.to([circleRed, circleBlue, circleGreen], {
+        x: 75,
         ease: Power3.easeOut,
         duration: 0.8,
       });
