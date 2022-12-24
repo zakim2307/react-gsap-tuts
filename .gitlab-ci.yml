@@ -10,6 +10,3 @@ build:
       - npm install
       - echo 'build project'
       - npm run build
-   artifacts:
-      paths:
-         - build/
