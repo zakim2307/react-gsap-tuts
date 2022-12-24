@@ -69,6 +69,9 @@ function App() {
   }, []);
   return (
     <div ref={(el) => (app = el)} className='App'>
+      {console.log(
+        "changesd, sdasd asd as ====================================="
+      )}
       <header className='App-header'>
         <div className='circle-container'>
           <div
