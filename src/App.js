@@ -73,7 +73,7 @@ function App() {
         "changesd, sdasd asd as ====================================="
       )}
       <header className='App-header'>
-        <h1>My Name is Zaki</h1>
+        <h1>My Name is Zaki Muhammad Mulla</h1>
         <div className='circle-container'>
           <div
             onClick={(el) => handleExpand(el)}
